@@ -1,5 +1,11 @@
+
+
+
 (function(){
-   const url = 'https://picsum.photos/v2';
+   const url = 'https://picsum.photos/v2/list';
+   document.getElementById("boton").addEventListener("click", prueba);
+
+
    fetch(`${url}/list`)  // llamado a api externo 
     .then(resp => {
         if(resp.ok && resp.status==200){
@@ -16,11 +22,15 @@
         <div class="card-body">
           <h5 class="card-title">${item.author} </h5>
           <h6 class="card-subtitle mb-2 text-muted">${item.id}</h6>
-          <a href="${item.url}" class"card-link">${item.url}
+          <a href="${item.url}" class"card-link">${item.url}</a>
         </div>
       </div>
             `;
         }
+        
    })
    .catch(resp => console.log("error llamado de api"))
-    })()
+    })()  
+    
+
+    

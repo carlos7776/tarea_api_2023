@@ -17,27 +17,29 @@
         background-color: beige;
       }
     #contenido{
-      position: relative;
-      left: 2.5%;
+     display: grid;
+     padding: 15px;
+
+     grid-template-columns: repeat(4,1fr);
+     background-color: rgba(0, 255, 255, 0.452);
+     gap: 20px;
+
     }
     
     .card {
       float: left;
       width: 20%;
       margin: 0.5%;
-      border: solid red 2px;
       position: relative;
       
       }
 
-     a{
-      color: rgba(6, 5, 6, 0.753);
-      text-decoration: none;
-      text-align: right;
-      font-size: larger;
-      background-color: rgb(178, 178, 189);
-      
-       
+     
+      h1{
+        text-align: center;
+        color: blue;
+        font-family:  'Courier New', Courier, monospace;
+        font-size: 60px;
       }
 
      h5{
@@ -58,15 +60,133 @@
         margin-left: 40px;
         width: auto;
         height: auto;
+        
+
        }
-          
+       .caja-inicio{
+        display:grid;
+        grid-template-columns:repeat(6, 1fr);
+        padding: 10px;
+        text-align: center;
+        left: 55%; 
+       }
+
+       #boton{
+       margin-right: 300px;
+        margin-top: 110px;
+        width: 100px;
+        position: relative;
+       }
+       label{
+        position: relative;
+        display: flex;
+        width: 150px;
+        left: 100%;
+        align-items: center;
+       }
+
+            /* Media Queries */
+        @media (max-width: 900px) {
+          label{  
+           position: relative;
+           margin-left: -4px;
+            
+         
+           }
+           .caja-inicio{
+            position: relative;
+            border: solid 2px red; 
+            width: 882px;
+            left: -50px;
+
+           
+            }  
+          }
+          @media (max-width: 400px) {
+          label{  
+           position: relative;
+           margin-left: -4px;
+            
+         
+           }
+           .caja-inicio{
+            position: relative;
+            border: solid 2px red; 
+            width: 882px;
+            left: -50px;
+
+           
+            }  
+          }
+
+
+     
+           
+
+        
+      /*   @media (max-width: 880px) {
+          label{           
+            border: solid 2px red; 
+            }}
+            @media (max-width: 881px) {
+              .caja-inicio{
+            border: solid 2px red; 
+            }  
+        }
+          */ 
     </style>
   </head>
 <body>
-    <div id="contenido"> </div>
-    <script 
+  <h1>picsum</h1>
+
+  <div class="caja-inicio">
+
+    <label >
+      <input id="grises" type="checkbox" name="prog" >Escala de grises
+    </label>
     
-    src="picsum.js"></script>
+    <label >Blur
+    <select id="blur"> 
+      <option value="" disabled>select una</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+   </select>
+  </label>
+
+  <label >pagina
+   <select id="pagina" required>
+    <option value="0" hidden>select un valor</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+ </select>
+</label>
+
+ <label >cantidad: 
+<input id="cantidad" type="text"></input>
+</label>
+<br>
+<button id="boton"  type="button">aceptar</button>
+    
+  </div>
+    <div id="contenido"> </div>
+    
+ 
+    
+    
+    
+    <script src="picsum2.js"></script>
     
 </body>
 </html>
