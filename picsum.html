@@ -19,7 +19,6 @@
     #contenido{
      display: grid;
      padding: 15px;
-
      grid-template-columns: repeat(4,1fr);
      background-color: rgba(0, 255, 255, 0.452);
      gap: 20px;
@@ -50,6 +49,13 @@
         width: 200px;
         margin-left:25px ;
       }
+      .cantidad1{
+              font-size: 18px;
+              margin-top: 10px;
+              background-color: transparent;
+              color: black;
+           
+            }
       h6{
         text-align: center;
       }
@@ -84,23 +90,43 @@
         left: 100%;
         align-items: center;
        }
+       ul.pagination{
+        justify-content: center;
+       }
 
             /* Media Queries */
         @media (max-width: 900px) {
           label{  
            position: relative;
-           margin-left: -4px;
-            
-         
-           }
-           .caja-inicio{
-            position: relative;
-            border: solid 2px red; 
-            width: 882px;
-            left: -50px;
-
+           margin-left: -148px;
+           padding-left: -10px;
+           width: 320px;
+           } 
+          .cantidad1{
+              font-size: 18px;
+              margin-top: 10px;
+              background-color: transparent;
+              color: black;
            
-            }  
+            }
+            #contenido{
+              display: grid;
+              padding: 10px;
+              grid-template-columns: repeat(3,1fr);
+              background-color: rgba(0, 255, 255, 0.452);
+              margin-left: -65px;
+              margin-right: -20px;
+             
+
+            }
+           
+            .card {
+              float: left;
+              width: 20px; 
+              position: relative;
+              border: solid rebeccapurple ;
+              
+          }
           }
           @media (max-width: 400px) {
           label{  
@@ -109,20 +135,15 @@
             
          
            }
+
            .caja-inicio{
             position: relative;
-            border: solid 2px red; 
             width: 882px;
+            height: 800px;
             left: -50px;
-
            
             }  
           }
-
-
-     
-           
-
         
       /*   @media (max-width: 880px) {
           label{           
@@ -173,7 +194,8 @@
  </select>
 </label>
 
- <label >cantidad: 
+ <label class="1" >
+  <h5 class="cantidad1">cantidad:</h5>
 <input id="cantidad" type="text"></input>
 </label>
 <br>
@@ -182,7 +204,21 @@
   </div>
     <div id="contenido"> </div>
     
- 
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
     
     
     
